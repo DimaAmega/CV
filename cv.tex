@@ -6,6 +6,22 @@
 \documentclass[a4paper,12pt]{article}
 
 %----------------------------------------------------------------------------------------
+%	FONT
+%----------------------------------------------------------------------------------------
+
+% % fontspec allows you to use TTF/OTF fonts directly
+% \usepackage{fontspec}
+% \defaultfontfeatures{Ligatures=TeX}
+
+% % modified for ShareLaTeX use
+% \setmainfont[
+% SmallCapsFont = Fontin-SmallCaps.otf,
+% BoldFont = Fontin-Bold.otf,
+% ItalicFont = Fontin-Italic.otf
+% ]
+% {Fontin.otf}
+
+%----------------------------------------------------------------------------------------
 %	PACKAGES
 %----------------------------------------------------------------------------------------
 \usepackage{url}
@@ -37,6 +53,8 @@
 \usepackage{multicol}
 \usepackage{multirow}
 
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
 \titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
 \titlespacing{\section}{0pt}{10pt}{10pt}
 
@@ -53,6 +71,9 @@
 %for social icons
 \usepackage{fontawesome5}
 
+%debug page outer frames
+%\usepackage{showframe}
+
 %----------------------------------------------------------------------------------------
 %	BEGIN DOCUMENT
 %----------------------------------------------------------------------------------------
@@ -64,11 +85,18 @@
 %----------------------------------------------------------------------------------------
 %	TITLE
 %----------------------------------------------------------------------------------------
+
+% \begin{tabularx}{\linewidth}{ @{}X X@{} }
+% \huge{Your Name}\vspace{2pt} & \hfill \emoji{incoming-envelope} email@email.com \\
+% \raisebox{-0.05\height}\faGithub\ username \ | \
+% \raisebox{-0.00\height}\faLinkedin\ username \ | \ \raisebox{-0.05\height}\faGlobe \ mysite.com  & \hfill \emoji{calling} number
+% \end{tabularx}
+
 \begin{tabularx}{\linewidth}{@{} C @{}}
 \Huge{Dmitrii Khorkin} \\[7.5pt]
 \href{https://github.com/dimaamega}{\raisebox{-0.05\height}\faGithub\ Github} \ $|$ \ 
 \href{https://linkedin.com/in/dmitry-khorkin}{\raisebox{-0.05\height}\faLinkedin\ LinkedIn} \ $|$ \ 
-\href{mailto:dmitryhorkin@gmail.com}{\raisebox{-0.05\height}\faEnvelope \ Correo} \ $|$ \ 
+\href{mailto:dmitryhorkin@gmail.com}{\raisebox{-0.05\height}\faEnvelope \ Mail} \ $|$ \ 
 \href{https://t.me/dkhrkn}{\raisebox{-0.05\height}\faTelegram \ Telegram} \
 \end{tabularx}
 
@@ -77,31 +105,31 @@
 %----------------------------------------------------------------------------------------
 
 %Interests/ Keywords/ Summary
-\section{Resumen}
-Hombre, 26 años. Tengo más de 6 años de experiencia en programación en diferentes dominios.
-Estoy en constante aprendizaje. Tengo una sólida formación científica y amplio conocimiento en una amplia
-gama de tecnologías, incluyendo informática, aprendizaje automático y desarrollo web.
-Me encanta resolver problemas complejos y explicarlos mediante visualizaciones atractivas.
-Disfruto creando productos maravillosos con personas para personas
+\section{Summary}
+Male, 26 y.o. I have 6+ years of programming experience in different domains.
+I'm constantly learning. I have a strong scientific background, extensive knowledge in a wide
+range of technologies, includes computer science, machine learning and web.
+I love to solve complex problems and explain it by using cool visualizations.
+I love to build wonderful products with people for people
 
 %----------------------------------------------------------------------------------------
 %	Experience
 %----------------------------------------------------------------------------------------
-\section{Experiencia Laboral}
+\section{Work Experience}
 
 \begin{tabularx}{\linewidth}{ @{}l r@{} }
-    \textbf{Evidently AI, Inc., Desarrollador de Software} & \hfill 1+ año: Septiembre 2023 - Presente \\[3.75pt]
+    \textbf{Evidently AI, Inc., Software Developer} & \hfill 1+ year: September 2023 - Present \\[3.75pt]
     \multicolumn{2}{@{}X@{}}{
         \begin{minipage}[t]{\linewidth}
             \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
                 \item[--]
-                Lideré el desarrollo de UI de dos proyectos relacionados: la biblioteca de código abierto Evidently (\href{https://demo.evidentlyai.com}{sitio demo}, \href{https://github.com/evidentlyai/evidently}{github}) y Evidently \href{https://www.evidentlyai.com/register}{cloud} (desde cero)
+                Led UI development of two related projects: evidently open source library (\href{https://demo.evidentlyai.com}{demo website}, \href{https://github.com/evidentlyai/evidently}{github}) and evidently \href{https://www.evidentlyai.com/register}{cloud} (from scratch)
                 \item[--]
-                Aceleré la carga inicial de las páginas eliminando cascadas de red
+                Accelerated the initial loading of the pages by eliminating network waterfall
                 \item[--]
-                Mejoré la confiabilidad y el tiempo de desarrollo de nuevas funciones implementando un proceso personalizado de sincronización entre API backend y cliente desde cero
+                Improved reliability and time of developing new features by implementing custom process of synchronization backend api and client api from scratch
                 \item[--]
-                Mejoré el proceso de pruebas creando pruebas E2E con \href{https://playwright.dev}{playwright}
+                Improved testing process by creating e2e tests via \href{https://playwright.dev}{playwright}
                 \\ \\ \underline{Stack}: \raisebox{-0.05\height}\faReact \ React, \raisebox{-0.05\height}\faCode \ MUI, \raisebox{-0.05\height}\faPython \ Python, \raisebox{-0.05\height}\faDocker \ Docker, \raisebox{-0.05\height}\faGithub \ Github Actions
             \end{itemize}
         \end{minipage}
@@ -109,29 +137,29 @@ Disfruto creando productos maravillosos con personas para personas
 \end{tabularx}
 
 \begin{tabularx}{\linewidth}{ @{}l r@{} }
-\textbf{INPoint LLC, Ingeniero de Software} & \hfill 3.25 años: Marzo 2020 - Abril 2022, Nov 2023 - Mayo 2023 \\[3.75pt]
+\textbf{INPoint LLC, Software Engineer} & \hfill 3.25 years: March 2020 - April 2022, Nov 2023 - May 2023 \\[3.75pt]
 \multicolumn{2}{@{}X@{}}{
     \begin{minipage}[t]{\linewidth}
         \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
             \item[--]
-            Desarrollé el backend de \href{https://apps.apple.com/fi/app/ommie/id1510381143}{Ommie}, una red social minimalista para compartir historias personales inspiradoras.
-            \href{https://ccare.stanford.edu/act-person/sasha-marchenko}{Stanford escribe} sobre nosotros
+            Developed the backend of \href{https://apps.apple.com/fi/app/ommie/id1510381143}{Ommie}, a minimalistic social network to share inspiring personal stories.
+            \href{https://ccare.stanford.edu/act-person/sasha-marchenko}{Stanford writes} about us
             \\ \underline{Stack}: \raisebox{-0.05\height}\faCloud \ AWS, \raisebox{-0.05\height}\faNodeJs \ Node.js, \raisebox{-0.05\height}\faDatabase \ MySQL
             \item[--]
-            Ayudé a migrar el \href{https://adventures.polaris.com/}{sitio web} de Polaris Adventures de React puro (SPA) al framework Remix (SSR).
-            Implementé la funcionalidad de sesión.
-            Aceleré la carga inicial de las páginas (LCP y otras métricas) en aproximadamente \textbf{2.14} veces
+            Helped to migrate polaris adventures's \href{https://adventures.polaris.com/}{website} from vanilla React (spa) to Remix (ssr) framework.
+            Implemented session functionality.
+            Accelerated the initial loading of the pages (LCP and other metrics) by $\sim$ \textbf{2.14} times
             \\ \underline{Stack}: \raisebox{-0.05\height}\faCloud \ AWS, \raisebox{-0.05\height}\faReact \ React, \raisebox{-0.05\height}\faCode \ Remix, \raisebox{-0.05\height}\faCode \ Typescript, \raisebox{-0.05\height}\faCode \ Redis, \raisebox{-0.05\height}\faDocker \ Docker, \raisebox{-0.05\height}\faDatabase \ MySQL
             \item[--] 
-            Integré el sistema CRM en los procesos de negocio existentes del banco.
-            Gestioné el proceso de lanzamiento.
-            Me comuniqué con múltiples equipos, incluidos desarrollo front/back, DevOps y seguridad.
-            Creé un prototipo para automatizar el proceso de copia y creación de un modelo de datos complejo de CRM basado en el algoritmo DFS, lo que ahorró aproximadamente \textbf{3} días en cada implementación en un nuevo entorno
+            Integrated the CRM system into the bank's existing business processes.
+            Managed the release process.
+            Communicated with many teams, includes front/back development, devops, and security.
+            Created the prototype to automate the process of copying and creating a complex CRM's data model based on the DFS algorithm, which saved $\sim$\textbf{3} days for each deployment on new environment
             \\ \underline{Stack}: \raisebox{-0.05\height}\faCode \ Django, \raisebox{-0.05\height}\faPython \ Python, \raisebox{-0.05\height}\faNodeJs \ Node.js, \raisebox{-0.05\height}\faEllipsisH \ Kafka, \raisebox{-0.05\height}\faDocker \ Docker, \raisebox{-0.05\height}\faDatabase \ PostgreSQL
             \item[--]
-            Desarrollé el backend de la plataforma web de Etra para automatizar la selección de intercambiadores de calor, incluyendo el núcleo del sistema: algoritmos para el cálculo térmico.
-            Me comuniqué con ingenieros del cliente para traducir los principios físicos que ellos comprenden en algoritmos y código.
-            Desarrollé toda la infraestructura, así como sistemas personalizados de despliegue para el backend y frontend
+            Developed backend of Etra's web platform to automate the selection of heat exchangers, including the core of the system: algorithms for the heat calculation.
+            Communicated with customer engineers in order to map physics they understand to algorithms and code.
+            Developed the entire infrastructure, custom backend \& frontend deployment systems
             \\ \underline{Stack}: \raisebox{-0.05\height}\faCloud \ SelectEl, \raisebox{-0.05\height}\faNodeJs \ Node.js, \raisebox{-0.05\height}\faPython \ Python, \raisebox{-0.05\height}\faDatabase \ MySQL
         \end{itemize}
     \end{minipage}
@@ -139,24 +167,24 @@ Disfruto creando productos maravillosos con personas para personas
 \end{tabularx}
 
 \begin{tabularx}{\linewidth}{ @{}l r@{} }
-    \textbf{UNN, investigador junior} & \hfill Septiembre 2019 - Agosto 2022 \\[3.75pt]
-    \multicolumn{2}{@{}X@{}}{Investigador en el \href{https://itmm.unn.ru/about/chairs/kafedra-teorii-upravleniya-i-dinamiki-sistem}{Departamento de Teoría del Control y Dinámica de Sistemas}.
-    Amplié los límites del conocimiento humano sobre el proceso de sincronización en el campo de la dinámica no lineal.
-    Varios de mis trabajos fueron publicados en revistas de cuartil Q1 (ver la sección 'Publicaciones' más abajo).
+    \textbf{UNN, junior researcher} & \hfill September 2019 - August 2022 \\[3.75pt]
+    \multicolumn{2}{@{}X@{}}{Researcher at \href{https://itmm.unn.ru/about/chairs/kafedra-teorii-upravleniya-i-dinamiki-sistem}{Department of Control Theory and Dynamic Systems}.
+    I have expanded the boundaries of human knowledge about the synchronization process in the field of nonlinear dynamics.
+    Several of my works were published in Q1 journals (see the 'Publications' section below)
 
-    Algunas presentaciones sobre mi trabajo: Licenciatura: \href{https://slides-com.translate.goog/dimaamega1/confirention-6ed465/fullscreen?\_x\_tr\_sl=auto\&\_x\_tr\_tl=en\&\_x\_tr\_hl=en\&\_x\_tr\_pto=wapp\&\_x\_tr\_hist=true}{inglés}/\href{https://slides.com/dimaamega1/confirention-6ed465/fullscreen}{ruso} tesis.
-    Maestría: \href{https://slides-com.translate.goog/dmitryhorkin/master-3/fullscreen?\_x\_tr\_sl=auto\&\_x\_tr\_tl=en\&\_x\_tr\_hl=en\&\_x\_tr\_pto=wapp\&\_x\_tr\_hist=true}{inglés}/\href{https://slides.com/dmitryhorkin/master-3/fullscreen}{ruso} tesis.
+    Some presentations about my work: Bachelor: \href{https://slides-com.translate.goog/dimaamega1/confirention-6ed465/fullscreen?\_x\_tr\_sl=auto\&\_x\_tr\_tl=en\&\_x\_tr\_hl=en\&\_x\_tr\_pto=wapp\&\_x\_tr\_hist=true}{english}/\href{https://slides.com/dimaamega1/confirention-6ed465/fullscreen}{russian} thesis.
+    Master: \href{https://slides-com.translate.goog/dmitryhorkin/master-3/fullscreen?\_x\_tr\_sl=auto\&\_x\_tr\_tl=en\&\_x\_tr\_hl=en\&\_x\_tr\_pto=wapp\&\_x\_tr\_hist=true}{english}/\href{https://slides.com/dmitryhorkin/master-3/fullscreen}{russian} thesis
     }
 \end{tabularx}
 
 %----------------------------------------------------------------------------------------
 %	EDUCATION
 %----------------------------------------------------------------------------------------
-\section{Educación}
+\section{Education}
 \begin{tabularx}{\linewidth}{@{}l X@{}}	
-2020 - 2022 & \href{https://academy.yandex.com/dataschool/course/machine-learning}{Desarrollador de ML} \& parcialmente \href{https://academy.yandex.com/dataschool/course/big-data-infrastructure}{Infraestructura de Big Data} en el equivalente a un máster en \textbf{\href{https://academy.yandex.com/dataschool/}{escuela de análisis de datos de yandex}} \\
-2020 - 2022 & Máster con honores en \textbf{\href{https://itmm.unn.ru/obrazovanie/magistratura/iskusstvennyj-intellekt}{UNN, informática fundamental y tecnologías de la información}} \hfill \normalsize \\
-2016 - 2020 & Licenciatura en \textbf{\href{https://itmm.unn.ru/courses/pmi}{UNN, matemáticas aplicadas e informática}} \\
+2020 - 2022 & \href{https://academy.yandex.com/dataschool/course/machine-learning}{ML developer} \& partly \href{https://academy.yandex.com/dataschool/course/big-data-infrastructure}{big data infrastructure} at MSc equivalent \textbf{\href{https://academy.yandex.com/dataschool/}{yandex school of data analysis}} \\
+2020 - 2022 & Master's Degree with honors at \textbf{\href{https://itmm.unn.ru/obrazovanie/magistratura/iskusstvennyj-intellekt}{UNN, fundamental computer science and information technology}} \hfill \normalsize \\
+2016 - 2020 & Bachelor's Degree at \textbf{\href{https://itmm.unn.ru/courses/pmi}{UNN, applied mathematics and computer science}} \\
 
 \end{tabularx}
 
@@ -164,16 +192,15 @@ Disfruto creando productos maravillosos con personas para personas
 %----------------------------------------------------------------------------------------
 %	SKILLS
 %----------------------------------------------------------------------------------------
-\section{Habilidades}
+\section{Skills}
 \begin{tabularx}{\linewidth}{@{}l X@{}}
 % Domains: & \normalsize{ \raisebox{-0.05\height} \faGlobe \ Web, \raisebox{-0.05\height} \faRobot \ ML, \raisebox{-0.05\height} \faGlasses \ Research (Nonlinear Dynamics)} \\
-Lenguajes de programación: & \normalsize{\raisebox{-0.05\height}\faJs \ javascript/typescript  \raisebox{-0.05\height}\faPython \ python, \raisebox{-0.05\height}\faCode \ C/C++, \raisebox{-0.05\height}\faCode \ golang, \raisebox{-0.05\height}\faCode \ haskell (a \href{https://github.com/DimaAmega/haskell-homework/blob/main}{bit})} \\
+Programming languages: & \normalsize{\raisebox{-0.05\height}\faJs \ javascript/typescript  \raisebox{-0.05\height}\faPython \ python, \raisebox{-0.05\height}\faCode \ C/C++, \raisebox{-0.05\height}\faCode \ golang, \raisebox{-0.05\height}\faCode \ haskell (a \href{https://github.com/DimaAmega/haskell-homework/blob/main}{bit})} \\
 Web: & \normalsize{ \underline{SSR}: \raisebox{-0.05\height}\faCode \ Remix, \underline{Front}: \raisebox{-0.05\height}\faCode \ html/css, \raisebox{-0.05\height}\faReact \ React, \raisebox{-0.05\height}\faCode \ Mui, \underline{Back}: \raisebox{-0.05\height}\faNodeJs \ Node.js, \raisebox{-0.05\height}\faCode \ Express } \\
-Herramientas: & \normalsize{ \raisebox{-0.05\height} \faGitSquare \ Git, \raisebox{-0.05\height}\faDocker \ Docker, \raisebox{-0.05\height}\faNodeJs \ Node.js, \raisebox{-0.05\height}\faGithub \ Github Actions} \\
+Tools: & \normalsize{ \raisebox{-0.05\height} \faGitSquare \ Git, \raisebox{-0.05\height}\faDocker \ Docker, \raisebox{-0.05\height}\faNodeJs \ Node.js, \raisebox{-0.05\height}\faGithub \ Github Actions} \\
 % Visualization: & \normalsize{ \raisebox{-0.05\height}\faJs \ Three.js, \raisebox{-0.05\height}\faJs \ PIXI.js, \raisebox{-0.05\height}\faPython \ plotly, \raisebox{-0.05\height}\faPython \ matplotlib } \\
-Almacenamientos: & \normalsize{ \raisebox{-0.05\height} \faDatabase \ MySQL,  \raisebox{-0.05\height} \faDatabase \ PostgreSQL,  \raisebox{-0.05\height} \faDatabase \ MongoDB,  \raisebox{-0.05\height} \faDatabase \ S3,  \raisebox{-0.05\height} \faDatabase \ Redis} \\
-Ciencias de la computación: & \normalsize{ \raisebox{-0.05\height} \faCode \ Algorithms, \raisebox{-0.05\height} \faCode \ Sistemas operativos, \raisebox{-0.05\height} \faCode \ Concurrencia \raisebox{-0.05\height} \faCode \ Programación
-asíncrona, \raisebox{-0.05\height} \faCode \ Sistemas distribuidos (fundamentos)} \\
+Storages: & \normalsize{ \raisebox{-0.05\height} \faDatabase \ MySQL,  \raisebox{-0.05\height} \faDatabase \ PostgreSQL,  \raisebox{-0.05\height} \faDatabase \ MongoDB,  \raisebox{-0.05\height} \faDatabase \ S3,  \raisebox{-0.05\height} \faDatabase \ Redis} \\
+Computer Science: & \normalsize{ \raisebox{-0.05\height} \faCode \ Algorithms, \raisebox{-0.05\height} \faCode \ Operating Systems Internals, \raisebox{-0.05\height} \faCode \ Concurrency \raisebox{-0.05\height} \faCode \ Asynchronous programming, \raisebox{-0.05\height} \faCode \ Distributed Systems (fundamentals)} \\
 
 \end{tabularx}
 
@@ -181,31 +208,31 @@ asíncrona, \raisebox{-0.05\height} \faCode \ Sistemas distribuidos (fundamentos
 %----------------------------------------------------------------------------------------
 %	PET-PROJECTS
 %----------------------------------------------------------------------------------------
-\section{Proyectos personales}
+\section{Pet-projects}
 
 \begin{tabularx}{\linewidth}{ @{}l r@{} }
-    \textbf{Vectorfields} & \hfill \href{https://dimaamega.github.io/vectorfields/?x\_str=y\&y\_str=-L*y-sin(x)\&xspeed=3\&count=2000\&M\_Time\_Alive\_particle=3.95\&M\_n\_lines=24\&L=1\&skip\_welcome\&add\_scale=100}{Sitio web},  \href{https://github.com/DimaAmega/vectorfields}{Código fuente} \\[3.75pt]
-    \multicolumn{2}{@{}X@{}}{Visualización de campos vectoriales 2D en el navegador}  \\
+    \textbf{Vectorfields} & \hfill \href{https://dimaamega.github.io/vectorfields/?x\_str=y\&y\_str=-L*y-sin(x)\&xspeed=3\&count=2000\&M\_Time\_Alive\_particle=3.95\&M\_n\_lines=24\&L=1\&skip\_welcome\&add\_scale=100}{Deployment},  \href{https://github.com/DimaAmega/vectorfields}{Source code} \\[3.75pt]
+    \multicolumn{2}{@{}X@{}}{Visualization of 2D vector fields in browser}  \\
 \end{tabularx}
 
 \begin{tabularx}{\linewidth}{ @{}l r@{} }
-    \textbf{Rotary States} & \hfill \href{https://github.com/unn-dynamic-systems/rotary_states}{Código fuente} \\[3.75pt]
-    \multicolumn{2}{@{}X@{}}{La biblioteca minimalista para encontrar modos de rotación en sistemas EDO} \\
+    \textbf{Rotary States} & \hfill \href{https://github.com/unn-dynamic-systems/rotary_states}{Source code} \\[3.75pt]
+    \multicolumn{2}{@{}X@{}}{The minimalistic library for finding rotational modes in ODE systems} \\
 \end{tabularx}
 
 \begin{tabularx}{\linewidth}{ @{}l r@{} }
-    \textbf{JS Promises} & \hfill \href{https://github.com/DimaAmega/js-promise-implementation}{Código fuente} \\[3.75pt]
-    \multicolumn{2}{@{}X@{}}{Implementación de "promesas" en javascript} \\
+    \textbf{JS Promises} & \hfill \href{https://github.com/DimaAmega/js-promise-implementation}{Source code} \\[3.75pt]
+    \multicolumn{2}{@{}X@{}}{Implementation of promises in javascript} \\
 \end{tabularx}
 
 ...
 
-Ver todos los proyectos en mi \href{https://github.com/dimaamega}{Github}
+See all projects on my \href{https://github.com/dimaamega}{Github}
 
 %----------------------------------------------------------------------------------------
 %	PUBLICATIONS
 %----------------------------------------------------------------------------------------
-\section{Publicaciones}
+\section{Publications}
 
 \begin{refsection}[citations.bib]
 \nocite{*}
@@ -214,5 +241,6 @@ Ver todos los proyectos en mi \href{https://github.com/dimaamega}{Github}
 
 ...
 
-Ver todas las publicaciones en LinkedIn's \href{https://www.linkedin.com/in/dmitry-khorkin/details/publications/}{publicaciones} 
+See all publications in LinkedIn's \href{https://www.linkedin.com/in/dmitry-khorkin/details/publications/}{publications}
+ 
 \end{document}
